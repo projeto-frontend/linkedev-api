@@ -217,6 +217,7 @@ avatar: <Arquivo de imagem>
 <h2 align ='center'> Criando vagas </h2>
 
 Aqui será preciso estar logado e possuir o cargo de Tech Recruiter;
+<p>Para o parâmetro "candidates", deve ser passado o id do Dev;
 <p>A data pode ser passada utilizando:</p>
 
 ```javascript
@@ -236,7 +237,7 @@ today.toLocaleDateString()
   "stacks": ["html", "css", "javascript"],
   "type": "Remoto",
   "reputation": 0,
-  "candidates": [],
+  "candidates": ["dev1_id", "dev2_id"],
   "userId": "recruiter_id",
   "date": "30/08/2022"
 }
