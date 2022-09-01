@@ -14,6 +14,15 @@ Este é a demonstração dos endpoints da aplicação do Projeto FrontEnd do M3 
 
 O url base da API é https://BASE_URL
 
+## Changelog - 31/08
+
+- User Dev não tem mais o parâmetro "role", a verificação fica a cargo do parâmetro booleano "is_recruiter" no user Recruiter;
+- Parâmetro mudou de "recruiter" para "is_recruiter" para melhor semântica;
+- Todos os parâmetros em português foram passados para inglês;
+- Adicionado o endpoint "/jobs" para cadastrar vagas;
+- Removidos parâmetros de id (é dado pela api automaticamente);
+- Nível de permissão do endpoint "/users" alterado para 640;
+
 <h2 align ='center'> Criação de Desenvolvedor</h2>
 
 `POST /register - FORMATO DA REQUISIÇÃO`
@@ -181,7 +190,7 @@ avatar: <Arquivo de imagem>
     "company": "Google",
     "social": "github/johndoe",
     "avatar_url": "https://avatar.png",
-    "recruiter": true
+    "is_recruiter": true
   },
 ]
 ```
