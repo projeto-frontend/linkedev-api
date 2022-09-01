@@ -22,6 +22,7 @@ O url base da API é https://linkedev.herokuapp.com
 - Adicionado o endpoint "/jobs" para cadastrar vagas;
 - Removidos parâmetros de id (é dado pela api automaticamente);
 - Nível de permissão do endpoint "/users" alterado para 640;
+- Adicionado o parâmetro "title" no user Dev.
 
 <h2 align ='center'> Criação de Desenvolvedor</h2>
 
@@ -34,6 +35,7 @@ O url base da API é https://linkedev.herokuapp.com
     "password": "123456",
     "name": "Linkedev",
     "level": "Sênior",
+    "title": "Desenvolvedor Frontend",
     "stacks": ["HTML", "CSS", "JavaScript"],
     "bio":  "Lorem ipsum dolor emet",
     "social": "github/johndoe",
@@ -54,6 +56,7 @@ Caso dê tudo certo, a resposta será assim:
 		"email": "linkedev@email.com",
 		"name": "Linkedev",
 		"level": "Sênior",
+		"title": "Desenvolvedor Frontend",
 		"stacks": [
 			"HTML",
 			"CSS",
@@ -110,6 +113,7 @@ Caso dê tudo certo, a resposta será assim:
 		"email": "linkedev@email.com",
 		"name": "Linkedev",
 		"level": "Sênior",
+		"title": "Desenvolvedor Frontend",
 		"stacks": [
 			"HTML",
 			"CSS",
@@ -151,6 +155,7 @@ Após o dev estar logado, para buscar o perfil do próprio dev, utilize o endpoi
 	"password": "$2a$10$MbEJ6eUT2sHUrcEAQFvtN.rWz3QqlLmNm9lceIg0RemIvfv3Z2cb2",
 	"name": "Linkedev",
 	"level": "Sênior",
+	"title": "Desenvolvedor Frontend",
 	"stacks": [
 		"HTML",
 		"CSS",
