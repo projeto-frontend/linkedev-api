@@ -1,24 +1,263 @@
-# json-server-base
+<h1 align="center">
+  Projeto FrontEnd - API
+</h1>
 
-Esse é o repositório com a base de JSON-Server + JSON-Server-Auth já configurada, feita para ser usada no desenvolvimento das API's nos Projetos Front-end.
+<p align = "center">
+Este é a demonstração dos endpoints da aplicação do Projeto FrontEnd do M3 da Kenzie Academy, utilizando JSON Server.
+</p>
 
-## Endpoints
+<p align="center">
+  <a href="#endpoints">Endpoints</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</p>
 
-Assim como a documentação do JSON-Server-Auth traz (https://www.npmjs.com/package/json-server-auth), existem 3 endpoints que podem ser utilizados para cadastro e 2 endpoints que podem ser usados para login.
+## **Endpoints**
 
-### Cadastro
+O url base da API é https://BASE_URL
 
-POST /register <br/>
-POST /signup <br/>
-POST /users
+<h2 align ='center'> Criação de Desenvolvedor</h2>
 
-Qualquer um desses 3 endpoints irá cadastrar o usuário na lista de "Users", sendo que os campos obrigatórios são os de email e password.
-Você pode ficar a vontade para adicionar qualquer outra propriedade no corpo do cadastro dos usuários.
+`POST /register - FORMATO DA REQUISIÇÃO`
+
+```json
+[
+  {
+    "email": "linkedev@email.com",
+    "password": "123456",
+    "name": "Linkedev",
+    "level": "Sênior",
+    "stacks": ["HTML", "CSS", "JavaScript"],
+    "bio":  "Lorem ipsum dolor emet",
+    "social": "github/johndoe",
+    "avatar_url": "https://avatar.png",
+  }
+]
+```
+
+Caso dê tudo certo, a resposta será assim:
+
+`POST /devs - FORMATO DA RESPOSTA - STATUS 201`
+
+```json
+[
+{
+	"accessToken": "eyJhbGciOiJIUzI1NiIsInRwiZXhwIjoxNjYxODk5MzA5LCJzdWIiOiIyIn0.WsEiwCoB1knJ3QgP9Yi97zl4bTzxHOcmspz7X1EARr8",
+	"user": {
+		"email": "linkedev@email.com",
+		"name": "Linkedev",
+		"level": "Sênior",
+		"stacks": [
+			"HTML",
+			"CSS",
+			"JavaScript"
+		],
+		"bio": "Lorem ipsum dolor emet",
+		"social": "github/johndoe",
+		"avatar_url": "https://avatar.png",
+		"role": "developer",
+		"id": 2
+	}
+}
+]
+```
+
+1. O campo - "social": Pode receber as redes sociais da pessoa, ou numero de telefone, algum método de contato fora da aplicação.
+
+2. O campo - "stacks" é uma array de strings que guarda as tecnologias que o usuário domina.
+
+<h2 align ='center'> Possíveis erros </h2>
+
+Email já cadastrado:
+
+`POST /devs`
+` FORMATO DA RESPOSTA - STATUS 400`
+
+```json
+{
+  "status": "error",
+  "message": "Email already exists"
+}
+```
+
+<h2 align = "center"> Login </h2>
+
+`POST /login - FORMATO DA REQUISIÇÃO`
+
+```json
+{
+  "email": "linkedev@email.com",
+  "password": "123456"
+}
+```
+
+Caso dê tudo certo, a resposta será assim:
+
+`POST /login - FORMATO DA RESPOSTA - STATUS 201`
+
+```json
+[
+{
+	"accessToken": "eyJhbGciOiJIUzI1NiIsInRwiZXhwIjoxNjYxODk5MzA5LCJzdWIiOiIyIn0.WsEiwCoB1knJ3QgP9Yi97zl4bTzxHOcmspz7X1EARr8",
+	"user": {
+		"email": "linkedev@email.com",
+		"name": "Linkedev",
+		"level": "Sênior",
+		"stacks": [
+			"HTML",
+			"CSS",
+			"JavaScript"
+		],
+		"bio": "Lorem ipsum dolor emet",
+		"social": "github/johndoe",
+		"avatar_url": "https://avatar.png",
+		"id": 2
+	}
+}
+]
+```
+
+Com essa resposta, vemos que temos duas informações, o dev e o token respectivo, dessa forma você pode guardar o token e o usuário logado no localStorage para fazer a gestão do dev no seu frontend.
+
+## Rotas que necessitam de autorização
+
+Rotas que necessitam de autorização deve ser informado no cabeçalho da requisição o campo "Authorization", dessa forma:
+
+> Authorization: Bearer {token}
+
+Após o dev estar logado, para buscar o perfil do próprio dev, utilize o endpoint a seguir.
+
+<h2 align ='center'> Buscar Perfil do usuário logado (token) </h2>
+
+`GET /profile - FORMATO DA REQUISIÇÃO`
+
+<blockquote>Na requisição apenas é necessário o TOKEN.</blockquote>
+
+<br>
+
+`GET /users - FORMATO DA RESPOSTA - STATUS 200`
+
+```json
+[
+{
+	"email": "linkedev@email.com",
+	"password": "$2a$10$MbEJ6eUT2sHUrcEAQFvtN.rWz3QqlLmNm9lceIg0RemIvfv3Z2cb2",
+	"name": "Linkedev",
+	"level": "Sênior",
+	"stacks": [
+		"HTML",
+		"CSS",
+		"JavaScript"
+	],
+	"bio": "Lorem ipsum dolor emet",
+	"social": "github/johndoe",
+	"avatar_url": "https://avatar.png",
+	"id": 2
+}
+]
+```
+
+<h2 align ='center'> Atualizando os dados do perfil </h2>
+
+Nesse é preciso estar logado, com o token no cabeçalho da requisição. Estes endpoints são para atualizar seus dados como, foto de perfil, nome, ou qualquer outra informação em relação ao que foi utilizado na criação do usuário.
+
+Endpoint para atualizar a foto de perfil:
+
+`PATCH /users/ - FORMATO DA REQUISIÇÃO`
+
+```multipart
+avatar: <Arquivo de imagem>
+```
 
 
-### Login
+<h2 align ='center'> Criação de recrutador </h2>
 
-POST /login <br/>
-POST /signin
+`POST /register - FORMATO DA REQUISIÇÃO`
 
-Qualquer um desses 2 endpoints pode ser usado para realizar login com um dos usuários cadastrados na lista de "Users"
+```json
+[
+  {
+    "name": "John Doe",
+    "email": "johndoe@email.com",
+    "password": "12345678",
+    "company": "Google",
+    "social": "github/johndoe",
+    "avatar_url": "https://avatar.png",
+    "recruiter": true
+  },
+]
+```
+
+<h2 align ='center'> Atualizando perfil de recrutador </h2>
+
+`PUT /users - FORMATO DA REQUISIÇÃO`
+
+```json
+{
+  "name": "John Doe",
+  "contact": "linkedin/araujooj",
+  "old_password": "123456",
+  "password": "123456789"
+}
+```
+
+<h2 align ='center'> Criando vagas </h2>
+
+Aqui será preciso estar logado e possuir o cargo de Tech Recruiter;
+A data pode ser passada utilizando:
+
+```javascript
+const today = new Date()
+today.toLocaleDateString()
+```
+
+`POST /jobs`
+
+```json
+{
+  "title": "Desenvolvedor Front-End",
+  "description": "asas asasa...",
+  "place": "São Paulo",
+  "salary": 1000000,
+  "level": "junior",
+  "stacks": ["html", "css", "javascript"],
+  "reputation": 0,
+  "candidates": [],
+  "userId": "recruiter_id",
+  "date": "30/08/2022"
+}
+```
+
+`GET /jobs`
+```json
+{
+  "title": "Desenvolvedor Front-End",
+  "description": "asas asasa...",
+  "place": "São Paulo",
+  "salary": 1000000,
+  "level": "junior",
+  "stacks": ["html", "css", "javascript"],
+  "reputation": 0,
+  "candidates": [],
+  "userId": "recruiter_id",
+  "date": "30/08/2022"
+}
+```
+
+`PUT /jobs`
+```json
+{
+  "title": "Desenvolvedor Front-End",
+  "description": "asas asasa...",
+  "place": "São Paulo",
+  "salary": 1000000,
+  "level": "junior",
+  "stacks": ["html", "css", "javascript"],
+}
+```
+
+`DELETE /jobs/:vaga_id`
+
+```
+Não é necessário um corpo da requisição.
+```
+
+---

@@ -31,5 +31,24 @@
       "role": "developer",
       "id": 2
     }
+  ],
+  "jobs": [
+    {
+      "title": "Desenvolvedor Front-End",
+      "description": "asas asasa...",
+      "place": "São Paulo",
+      "salary": 1000000,
+      "level": "junior",
+      "stacks": [
+        "html",
+        "css",
+        "javascript"
+      ],
+      "reputation": 0,
+      "candidates": [],
+      "userId": 2,
+      "date": "30/08/2022",
+      "id": 1
+    }
   ]
 }
