@@ -211,6 +211,7 @@ avatar: <Arquivo de imagem>
 <h2 align ='center'> Criando vagas </h2>
 
 Aqui será preciso estar logado e possuir o cargo de Tech Recruiter;
+<br>
 A data pode ser passada utilizando:
 
 ```javascript
