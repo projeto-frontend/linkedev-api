@@ -217,7 +217,7 @@ avatar: <Arquivo de imagem>
 <h2 align ='center'> Criando vagas </h2>
 
 Aqui será preciso estar logado e possuir o cargo de Tech Recruiter;
-<p>Para o parâmetro "candidates", deve ser passado o id do Dev;
+<p>Para o parâmetro "candidates" deve ser passado o id do Dev;
 <p>A data pode ser passada utilizando:</p>
 
 ```javascript
