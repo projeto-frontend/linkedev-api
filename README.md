@@ -135,7 +135,7 @@ Com essa resposta, vemos que temos duas informações, o dev e o token respectiv
 
 Para buscar o perfil do próprio dev, utilize o endpoint a seguir.
 
-<h2 align ='center'> Buscar Perfil do usuário logado (token) </h2>
+<h2 align ='center'> Buscar Perfil do usuário </h2>
 
 `GET /users/:id - FORMATO DA REQUISIÇÃO`
 
@@ -226,6 +226,7 @@ Caso dê tudo certo, a resposta será assim:
 	"avatar_url": "https://avatar.png",
 	"id": 4
 }
+```
 
 
 <h2 align ='center'> Criação de recrutador </h2>
@@ -279,7 +280,7 @@ Caso dê tudo certo, a resposta será assim:
     "password": "12345678",
     "company": "Google",
     "social": "linkedin/recruiter",
-    "avatar_url": "https://avatar.png,
+    "avatar_url": "https://avatar.png",
     "is_recruiter": true
 }
 
