@@ -203,7 +203,7 @@ avatar: <Arquivo de imagem>
 
 <h2 align ='center'> Atualizando perfil de recrutador </h2>
 
-`PUT /users - FORMATO DA REQUISIÇÃO`
+`PATCH /users - FORMATO DA REQUISIÇÃO`
 
 ```json
 {
@@ -259,7 +259,7 @@ today.toLocaleDateString()
 }
 ```
 
-`PUT /jobs`
+`PATCH /jobs`
 ```json
 {
   "title": "Desenvolvedor Front-End",
