@@ -14,7 +14,7 @@ Este é a demonstração dos endpoints da aplicação do Projeto FrontEnd do M3 
 
 O url base da API é https://linkedev.herokuapp.com
 
-### Changelog - 31/08
+### Changelog - 01/09
 
 - User Dev não tem mais o parâmetro "role", a verificação fica a cargo do parâmetro booleano "is_recruiter" no user Recruiter;
 - Parâmetro mudou de "recruiter" para "is_recruiter" para melhor semântica;
@@ -22,7 +22,8 @@ O url base da API é https://linkedev.herokuapp.com
 - Adicionado o endpoint "/jobs" para cadastrar vagas;
 - Removidos parâmetros de id (é dado pela api automaticamente);
 - Nível de permissão do endpoint "/users" alterado para 640;
-- Adicionado o parâmetro "title" no user Dev.
+- Adicionado o parâmetro "title" no user Dev;
+- Adicionado o parâmetro "type" nas vagas para definir a informação remoto vs presencial;
 
 <h2 align ='center'> Criação de Desenvolvedor</h2>
 
@@ -233,6 +234,7 @@ today.toLocaleDateString()
   "salary": 1000000,
   "level": "junior",
   "stacks": ["html", "css", "javascript"],
+  "type": "Remoto",
   "reputation": 0,
   "candidates": [],
   "userId": "recruiter_id",
@@ -249,6 +251,7 @@ today.toLocaleDateString()
   "salary": 1000000,
   "level": "junior",
   "stacks": ["html", "css", "javascript"],
+  "type": "Remoto",
   "reputation": 0,
   "candidates": [],
   "userId": "recruiter_id",
@@ -265,6 +268,7 @@ today.toLocaleDateString()
   "salary": 1000000,
   "level": "junior",
   "stacks": ["html", "css", "javascript"],
+  "type": "Remoto",
 }
 ```
 
