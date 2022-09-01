@@ -12,7 +12,7 @@ Este é a demonstração dos endpoints da aplicação do Projeto FrontEnd do M3 
 
 ## **Endpoints**
 
-O url base da API é https://BASE_URL
+O url base da API é https://linkedev.herokuapp.com
 
 ### Changelog - 31/08
 
