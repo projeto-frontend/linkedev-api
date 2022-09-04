@@ -48,7 +48,7 @@ O url base da API é https://linkedev.herokuapp.com
 
 Caso dê tudo certo, a resposta será assim:
 
-`POST /devs - FORMATO DA RESPOSTA - STATUS 201`
+`POST /register - FORMATO DA RESPOSTA - STATUS 201`
 
 ```json
 [
