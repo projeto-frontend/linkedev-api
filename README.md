@@ -81,7 +81,7 @@ Caso dê tudo certo, a resposta será assim:
 
 Email já cadastrado:
 
-`POST /devs`
+`POST /register`
 ` FORMATO DA RESPOSTA - STATUS 400`
 
 ```json
