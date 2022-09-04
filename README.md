@@ -68,7 +68,6 @@ Caso dê tudo certo, a resposta será assim:
 		"social": "github/johndoe",
 		"avatar_url": "https://avatar.png",
 		"role": "developer",
-		"id": 2
 	}
 }
 ]
