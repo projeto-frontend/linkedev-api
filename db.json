@@ -1,25 +1,11 @@
 {
   "users": [
     {
-      "email": "johndoe@email.com",
-      "password": "$2a$10$2udNETqy0IAA.leo75qOpu6KryIA5q/us3vRAz2QMqo4xV8ZK6g5e",
-      "name": "John Doe",
-      "level": "junior",
-      "stacks": [
-        "html",
-        "css",
-        "javascript"
-      ],
-      "bio": "Lorem ipsum dolor emet",
-      "social": "github/johndoe",
-      "avatar_url": "https://avatar.png",
-      "id": 1
-    },
-    {
-      "email": "linkedev@email.com",
-      "password": "$2a$10$MbEJ6eUT2sHUrcEAQFvtN.rWz3QqlLmNm9lceIg0RemIvfv3Z2cb2",
-      "name": "Linkedev",
+      "email": "gabriel@email.com",
+      "password": "$2a$10$VWiXFpKqgy8of25xiHH8Vui/dVPB1O6IFgoxK6HqPapV9EH6PjUNW",
+      "name": "Gabriel Martins",
       "level": "Sênior",
+      "title": "Desenvolvedor Frontend",
       "stacks": [
         "HTML",
         "CSS",
@@ -28,27 +14,122 @@
       "bio": "Lorem ipsum dolor emet",
       "social": "github/johndoe",
       "avatar_url": "https://avatar.png",
-      "role": "developer",
+      "id": 1
+    },
+    {
+      "email": "agnes@email.com",
+      "password": "$2a$10$jGP6Douzntq9TzRN6LR2MOnXbXPefLzpYP.n0L8S0f9/kkxLtw3i.",
+      "name": "Agnes Rogério",
+      "level": "Sênior",
+      "title": "Desenvolvedor Frontend",
+      "stacks": [
+        "HTML",
+        "CSS",
+        "JavaScript"
+      ],
+      "bio": "Lorem ipsum dolor emet",
+      "social": "github/johndoe",
+      "avatar_url": "https://avatar.png",
       "id": 2
+    },
+    {
+      "email": "thais@email.com",
+      "password": "$2a$10$6yReqABOEYFCxcKaBm/64OKN5MS.7QUr9XZKj0aHDDXMvSl7AHkjq",
+      "name": "Thaís Sales",
+      "level": "Sênior",
+      "title": "Desenvolvedor Frontend",
+      "stacks": [
+        "HTML",
+        "CSS",
+        "JavaScript"
+      ],
+      "bio": "Lorem ipsum dolor emet",
+      "social": "github/johndoe",
+      "avatar_url": "https://avatar.png",
+      "id": 3
+    },
+    {
+      "email": "naimy@email.com",
+      "password": "$2a$10$RUOth8CA26VWVmo8akJbXeA4csrQZnnvVGiM9jk7dQ71Sd0wCbtCC",
+      "name": "Naimy Prestes",
+      "level": "Sênior",
+      "title": "Desenvolvedor Frontend",
+      "stacks": [
+        "HTML",
+        "CSS",
+        "JavaScript"
+      ],
+      "bio": "Lorem ipsum dolor emet",
+      "social": "github/johndoe",
+      "avatar_url": "https://avatar.png",
+      "id": 4
+    },
+    {
+      "email": "paulo@email.com",
+      "password": "$2a$10$uYEYoUwWNC6icA9ujC3Ir.7wFwqVpH/Ar/42cESTugobtAm.rra1u",
+      "name": "Paulo Silva",
+      "level": "Sênior",
+      "title": "Desenvolvedor Frontend",
+      "stacks": [
+        "HTML",
+        "CSS",
+        "JavaScript"
+      ],
+      "bio": "Lorem ipsum dolor emet",
+      "social": "github/johndoe",
+      "avatar_url": "https://avatar.png",
+      "id": 5
+    },
+    {
+      "email": "paulo-recruiter@email.com",
+      "password": "$2a$10$dqRbJGb.4yv9PULBrl5wqeTM8Fd8WwvO4Tal4lIXkKrG7YqYcvfRe",
+      "name": "Paulo Silva",
+      "company": "Google",
+      "social": "github/johndoe",
+      "avatar_url": "https://avatar.png",
+      "is_recruiter": true,
+      "id": 6
+    },
+    {
+      "email": "naimy-recruiter@email.com",
+      "password": "$2a$10$XbKEKXfakwLwbUe8TDXj1OVEJkwhBQUZAMQAAWgx9Ls3iat/JpMrq",
+      "name": "Naimy Prestes",
+      "company": "Google",
+      "social": "github/johndoe",
+      "avatar_url": "https://avatar.png",
+      "is_recruiter": true,
+      "id": 7
+    },
+    {
+      "email": "agnes-recruiter@email.com",
+      "password": "$2a$10$Cv7K5r2fROkq76mIPSMOf.GNXxmaqucf.9DkZtwM7UT8BfGir8Dry",
+      "name": "Agnes Rogério",
+      "company": "Google",
+      "social": "github/johndoe",
+      "avatar_url": "https://avatar.png",
+      "is_recruiter": true,
+      "id": 8
+    },
+    {
+      "email": "thais-recruiter@email.com",
+      "password": "$2a$10$spUVBmpOhJzQiTQHPIX3eeXim72/4VQa6gdvaystXnXBYUFVpDv2K",
+      "name": "Thaís Sales",
+      "company": "Google",
+      "social": "github/johndoe",
+      "avatar_url": "https://avatar.png",
+      "is_recruiter": true,
+      "id": 9
+    },
+    {
+      "email": "gabriel-recruiter@email.com",
+      "password": "$2a$10$CuAB7zX5AaFvv9G3OvpZHeroGXDBSGqOBI/Ff1gvvOcLtEGNWtz/C",
+      "name": "Gabriel Martins",
+      "company": "Google",
+      "social": "github/johndoe",
+      "avatar_url": "https://avatar.png",
+      "is_recruiter": true,
+      "id": 10
     }
   ],
-  "jobs": [
-    {
-      "title": "Desenvolvedor Front-End",
-      "description": "asas asasa...",
-      "place": "São Paulo",
-      "salary": 1000000,
-      "level": "junior",
-      "stacks": [
-        "html",
-        "css",
-        "javascript"
-      ],
-      "reputation": 0,
-      "candidates": [],
-      "userId": 2,
-      "date": "30/08/2022",
-      "id": 1
-    }
-  ]
+  "jobs": []
 }
